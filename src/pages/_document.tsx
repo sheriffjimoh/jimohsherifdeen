@@ -1,10 +1,10 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head,  Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
     <Html lang="en">
-       <Head>
-      <title>Jimoh Sherifdeen - Full Stack Software Engineer</title>
+   <Head>
+      {/* <title>Jimoh Sherifdeen - Full Stack Software Engineer</title> */}
       <meta name="title" content="Jimoh Sherifdeen - Full Stack Software Engineer" />
       <meta name="keywords" content="Jimoh  Sherifdeen, Full Stack software engineer, software engineer, frontend developer, mobile developer" />
       <meta
