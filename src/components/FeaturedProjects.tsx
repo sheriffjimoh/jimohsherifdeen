@@ -8,12 +8,12 @@ import {
   Box,
 } from '@chakra-ui/layout'
 import NextLink from 'next/link'
-import Cards  from './Card'
+import { Card } from '@/components'
 import { SlideUpWhenVisible }  from '@/hooks'
 import ReactGA from 'react-ga'
 
 
-interface projectProps{
+export interface projectProps{
   projects: { 
     items:{
     fields: {
@@ -89,7 +89,7 @@ export  function FeaturedProjects({ projects }: projectProps) {
             </Stack>
           </SlideUpWhenVisible>
           <SlideUpWhenVisible threshold={undefined}>
-            <Cards
+            <Card
               imageURL={projects.items[0].fields.imgUrl}
               title={projects.items[0].fields.title}
               desc={projects.items[0].fields.description}
@@ -100,7 +100,7 @@ export  function FeaturedProjects({ projects }: projectProps) {
           </SlideUpWhenVisible>
           <SlideUpWhenVisible threshold={undefined}>
             <Box mt={{ md: '-50%' }}>
-            <Cards
+            <Card
               imageURL={projects.items[1].fields.imgUrl}
               title={projects.items[1].fields.title}
               desc={projects.items[1].fields.description}
@@ -112,7 +112,7 @@ export  function FeaturedProjects({ projects }: projectProps) {
           </SlideUpWhenVisible>
           <SlideUpWhenVisible threshold={0.8}>
             <Box mt={{ md: '40px' }}> 
-          <Cards
+          <Card
               imageURL={projects.items[2].fields.imgUrl}
               title={projects.items[2].fields.title}
               desc={projects.items[2].fields.description}

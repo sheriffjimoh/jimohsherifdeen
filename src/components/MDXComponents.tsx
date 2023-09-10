@@ -87,7 +87,7 @@ const Hr = () => {
   return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />
 }
 
-const MDXComponents = {
+export const MDXComponents = {
   h1: (props) => (
     <Heading as="h1" size="xl" my={4} color="displayColor" {...props} />
   ),
@@ -121,4 +121,4 @@ const MDXComponents = {
 }
 
 export { CustomLink }
-export default MDXComponents
+

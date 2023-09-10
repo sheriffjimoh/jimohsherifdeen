@@ -1,8 +1,9 @@
 import { Heading } from '@chakra-ui/layout'
 import { Box, Flex, Link, Stack, Text, SimpleGrid } from '@chakra-ui/react'
 import dateFormat from 'dateformat'
-import SlideUpWhenVisible from '../hooks/SlideUpWhenVisible'
+import { SlideUpWhenVisible } from '@/hooks'
 import NextLink from 'next/link'
+import readingTime from 'reading-time'
 
 export interface singleArticeleProps{
   articles: {
@@ -42,7 +43,7 @@ export  function LatestArticle({ articles }: singleArticeleProps) {
         </Flex>
       </SlideUpWhenVisible>
       <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={{ base: 2, md: 4 }}>
-        {articles.map((article: { fields: { slug: string; title: string; date: string } }, index: any) => (
+        {articles.map((article: { fields: { slug: string; title: string; date: string, body: string} }, index: any) => (
           <SlideUpWhenVisible 
              threshold={undefined} key={index}>
             <Link
@@ -81,7 +82,8 @@ export  function LatestArticle({ articles }: singleArticeleProps) {
                   <Box as="span" fontSize="xs">
                     &bull;
                   </Box>{' '}
-                  2 min read
+                  {readingTime(article.fields.body).text}
+                 
                 </Text>
               </Stack>
             </Link>

@@ -46,7 +46,7 @@ export interface cardsProps{
   tag: []
 }
 
-export default function Cards({
+export  function Card({
   imageURL,
   title,
   desc,

@@ -18,7 +18,7 @@ export default function Home({ projects, articles }: any) {
              <AboutMe />
              <FeaturedProjects projects={projects} />
              <LatestArticle articles={articles} />
-             <ContactMe />
+             <ContactMe /> 
         </Stack>
     </Container>
   )
