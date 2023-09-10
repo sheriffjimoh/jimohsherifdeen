@@ -8,14 +8,28 @@ import {
   Box,
 } from '@chakra-ui/layout'
 import NextLink from 'next/link'
-import Cards from './Card'
-import SlideUpWhenVisible from '../hooks/SlideUpWhenVisible'
+import Cards  from './Card'
+import { SlideUpWhenVisible }  from '@/hooks'
 import ReactGA from 'react-ga'
 
-export  function FeaturedProjects({ projects }: any) {
 
-  // console.log("projects - FeaturedProjects::", projects.items[0].fields);
-  console.log("projects.items[0].fields.imageUrl::",projects.items[0].fields.imgUrl)
+interface projectProps{
+  projects: { 
+    items:{
+    fields: {
+      imgUrl: string,
+      title: string,
+      description: string,
+      githubLink: string,
+      deployLink: string,
+      tags: []
+    }
+   }[]
+  }
+}
+
+export  function FeaturedProjects({ projects }: projectProps) {
+
   const handleClick = (event: any) => {
     ReactGA.event({
       category: 'click',

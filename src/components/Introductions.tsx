@@ -9,10 +9,10 @@ import {
     Image,
   } from '@chakra-ui/react'
   import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
-  import useMediaQuery from '@/hooks/useMediaQuery'
+  import { useMediaQuery } from '@/hooks'
   import ReactGA from 'react-ga'
   
-  export  function Introduction({ introduction } : any) {
+  export  function Introduction() {
     const isLargerThan800 = useMediaQuery(800)
     const handleClick = (event : any) => {
       ReactGA.event({
@@ -24,7 +24,7 @@ import {
       <>
         <Stack spacing={10} justifyContent="flex-start" alignItems="flex-start">
           <SlideFade
-            // direction="top"
+            // 
             in={true}
             transition={{ enter: { duration: 0.4, delay: 0.7 } }}
           >
@@ -62,7 +62,7 @@ import {
           </SlideFade>
   
           <SlideFade
-            direction="top"
+            
             in={true}
             transition={{ enter: { duration: 0.4, delay: 0.8 } }}
           >
@@ -85,7 +85,7 @@ import {
           </SlideFade>
   
           <SlideFade
-            direction="top"
+            
             in={true}
             transition={{ enter: { duration: 0.4, delay: 0.9 } }}
           >
@@ -123,7 +123,7 @@ import {
             </Text>
           </SlideFade>
           <SlideFade
-            direction="top"
+            
             in={true}
             transition={{ enter: { duration: 0.4, delay: 1.0 } }}
           >

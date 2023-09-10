@@ -14,20 +14,18 @@ import {
     PopoverArrow,
   } from '@chakra-ui/react'
   
-  import useMediaQuery from '../hooks/useMediaQuery'
-  import SlideUpWhenVisible from '../hooks/SlideUpWhenVisible'
-//   import ReactGA from 'react-ga'
+  import { useMediaQuery, SlideUpWhenVisible }  from '../hooks'
+  import ReactGA from 'react-ga'
   
   export  function AboutMe() {
     const isLargerThan800 = useMediaQuery(800)
     const handleHover = (event: any) => {
-        console.log("event:", event)
-    //   ReactGA.event({
-    //     category: 'hover',
-    //     action: event,
-    //   })
+      ReactGA.event({
+        category: 'hover',
+        action: event,
+      })
     }
-    const MoreInfo = ({ text, content }: any) => {
+    const MoreInfo = ({ text, content }: {text: string, content: string} ) => {
       return (
         <>
           {' '}

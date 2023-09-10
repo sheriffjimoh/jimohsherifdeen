@@ -31,10 +31,20 @@ import {
   SiGraphql
 } from 'react-icons/si'
 import { SiNextdotjs, SiChakraui } from 'react-icons/si'
-import useMediaQuery from '../hooks/useMediaQuery'
+import { useMediaQuery }  from '../hooks'
 import ReactGA from 'react-ga'
 
 import Image from './ChakraNextImage'
+
+
+export interface cardsProps{
+  imageURL: string,
+  title: string,
+  desc: string,
+  githubLink: string,
+  deployLink: string,
+  tag: []
+}
 
 export default function Cards({
   imageURL,
@@ -43,7 +53,7 @@ export default function Cards({
   githubLink,
   deployLink,
   tag,
-}: any) {
+}: cardsProps) {
   const getTag = (tag: any) => {
     let values = []
     if (tag == 'React') {
@@ -131,12 +141,11 @@ export default function Cards({
       bg="secondary"
       borderRadius="10px"
       minH="320px"
-      maxH="500px"
       border="1px"
       borderColor={{ base: '#333', md: 'borderColor' }}
     >
       <Link href={deployLink} isExternal>
-        <ScaleFade in={true} transition={{ duration: 1 }}>
+        <ScaleFade in={true} >
           <Image
             width={1250}
             height={600}

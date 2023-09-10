@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 
-const useMediaQuery = (width) => {
+export const useMediaQuery = (width) => {
   const [targetReached, setTargetReached] = useState(false)
 
   const updateTarget = useCallback((e) => {
@@ -26,4 +26,3 @@ const useMediaQuery = (width) => {
   return targetReached
 }
 
-export default useMediaQuery

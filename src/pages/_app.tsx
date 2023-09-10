@@ -28,7 +28,6 @@ export default function App({ Component, pageProps }: AppProps) {
               display: flex;
               flex-direction: column;
               min-height: 100vh;
-              background: #000;
             }
             ::-webkit-scrollbar {
               width: 8px;

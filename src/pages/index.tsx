@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Container, Introduction, AboutMe, FeaturedProjects }  from '@/components'
+import { Container, Introduction, AboutMe, FeaturedProjects, LatestArticle,ContactMe }  from '@/components'
 import { Stack } from '@chakra-ui/react'
-export default function Home({ projects }: any) {
 
+export default function Home({ projects, articles }: any) {
   return (
     <Container enableTransition={true} >
          <Stack
           as="main"
-          spacing={{md: "114px", base: "64px"}}
+          spacing={{md: "120px", base: "64px"}}
           justifyContent="center"
           alignItems="flex-start"
           px={{ base: '5vw', md: '10vw' }}
@@ -17,6 +17,8 @@ export default function Home({ projects }: any) {
              <Introduction  />
              <AboutMe />
              <FeaturedProjects projects={projects} />
+             <LatestArticle articles={articles} />
+             <ContactMe />
         </Stack>
     </Container>
   )
@@ -33,11 +35,11 @@ export async function getStaticProps() {
     content_type: 'featuredProjects'
   })
 
-  // let data2 = await client.getEntries({
-  //   content_type: 'blogPosts',
-  //   limit: 4,
-  //   order: 'sys.createdAt',
-  // })
+  let articles = await client.getEntries({
+    content_type: 'blogPosts',
+    limit: 4,
+    order: 'sys.createdAt',
+  })
 
   let introduction = await client.getEntries({
     content_type: 'introduction',
@@ -45,20 +47,12 @@ export async function getStaticProps() {
     order: 'sys.createdAt',
   })
 
-  console.log(introduction)
 
-  // let data4 = await client.getEntries({
-  //   content_type: 'contactMe',
-  //   limit: 1,
-  //   order: 'sys.createdAt',
-  // })
 
   return {
     props: {
-      projects: projects,
-      articles: [],
-      introduction: introduction.items,
-      contactMe: [],
+      projects,
+      articles: articles.items,
     },
   }
 }

@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import styled from '@emotion/styled'
-import useMediaQuery from '../hooks/useMediaQuery'
+import { useMediaQuery } from '@/hooks'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 export  function Header({ enableTransition } : any) {
@@ -68,7 +68,7 @@ export  function Header({ enableTransition } : any) {
   )
 
   return (
-    <Box zIndex="99">
+    <Box zIndex="100" >
       <Slide
         direction="top"
         in={true}
@@ -77,8 +77,7 @@ export  function Header({ enableTransition } : any) {
             ? { enter: { duration: 0.5, delay: 0.01 } }
             : { enter: { duration: 0, delay: 0 } }
         }
-        // background="black"
-        // background="rgba(0,0,0,0.8)"
+       
       >
         <Flex
           as="nav"
@@ -89,7 +88,7 @@ export  function Header({ enableTransition } : any) {
           px="3vw"
           py="3"
           borderBottom="0.5px solid #1e2029"
-          background="black"
+          background={enableTransition ? 'rgba(0,0,0,0.5)' : 'transparent'}
         >
           <NextLink href="/" passHref>
             <Text
