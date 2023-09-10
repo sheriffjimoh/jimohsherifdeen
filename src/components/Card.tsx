@@ -34,7 +34,7 @@ import { SiNextdotjs, SiChakraui } from 'react-icons/si'
 import { useMediaQuery }  from '../hooks'
 import ReactGA from 'react-ga'
 
-import Image from './ChakraNextImage'
+import { Image }  from '@/components'
 
 
 export interface cardsProps{

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useState } from 'react'
 import { Stack, Heading, Text, Divider, Flex, Box } from '@chakra-ui/react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -11,7 +11,7 @@ import dateFormat from 'dateformat'
 
 export default function Index({ articles }: any) {
   const [query, setQuery] = useState('')
-  const handleChange = (e) => setQuery(e.target.value)
+  const handleChange = (e: any) => setQuery(e.target.value)
   const isLargerThan1024 = useMediaQuery(1024)
 
   return (
@@ -82,10 +82,10 @@ export default function Index({ articles }: any) {
         <Divider />
         <Stack spacing={5}>
           {articles
-            .filter((e) =>
+            .filter((e: { fields: { title: string } }) =>
               e.fields.title.toLowerCase().includes(query.toLowerCase()),
             )
-            .map((article, index) => (
+            .map((article: { fields: { date: string; body: string; slug: string; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; summary: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined } }, index: Key | null | undefined) => (
               <Stack
                key={index}
                 direction={isLargerThan1024 ? 'row' : 'column'}

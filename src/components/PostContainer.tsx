@@ -29,6 +29,22 @@ export const PostContainer = styled(Stack)`
       display: block;
       margin: auto;
     }
+    h1{
+      font-size: 2.5rem;
+      color:  white
+    }
+    h2{
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    code{
+      background: #080808;
+      color: #3ccf91;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.2rem;
+      font-style: italic;
+      width: 100%;
+    }
   }
 `
 

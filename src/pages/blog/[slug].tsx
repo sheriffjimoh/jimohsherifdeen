@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Avatar, Text, Heading, Stack } from '@chakra-ui/react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { ArticleJsonLd, NextSeo } from 'next-seo'
 
@@ -12,7 +13,7 @@ import readingTime from 'reading-time'
 import { Image, Container, PostContainer, MDXComponents } from '@/components'
 
 export default function Post({ metadata, source, views } : any) {
-  console.log("source:", metadata)
+
   return (
     <>
       <NextSeo
@@ -117,7 +118,8 @@ export default function Post({ metadata, source, views } : any) {
               ></Image>
             </Stack>
             <PostContainer>
-              <MDXRemote {...source} components={MDXComponents} />
+              {documentToReactComponents(metadata.body)}
+              {/* <MDXRemote {...source} components={MDXComponents} /> */}
             </PostContainer>
           </Stack>
         </Stack>
@@ -152,6 +154,7 @@ export async function getStaticProps({ params }: any) {
   const article = data.items[0].fields
   const source = article.body
   article.readingTime = readingTime(source).text
+  
   const mdxSource = await serialize(source, {
     mdxOptions: {
       rehypePlugins: [mdxPrism],
