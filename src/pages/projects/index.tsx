@@ -15,8 +15,8 @@ export default function Projects({ projects } : projectProps) {
     <>
       <Container>
         <Head>
-          <title>Abdul Rahman - Software Engineer</title>
-          <meta name="title" content="Abdul Rahman - Software Engineer" />
+          <title>Jimoh Sherifdeen - Full  Stack Software Engineer</title>
+          <meta name="title" content="Jimoh Sherifdeen - Full  Stack Software Engineer" />
           <meta
             name="description"
             content="Software Engineer based in Indonesia, an undergraduate student at Universitas Negeri Surabaya."
@@ -26,7 +26,7 @@ export default function Projects({ projects } : projectProps) {
           <meta property="og:url" content="https://abdulrahman.id/projects" />
           <meta
             property="og:title"
-            content="Abdul Rahman - Software Engineer"
+            content="Jimoh Sherifdeen - Full  Stack Software Engineer"
           />
           <meta
             property="og:description"
@@ -41,7 +41,7 @@ export default function Projects({ projects } : projectProps) {
           />
           <meta
             property="twitter:title"
-            content="Abdul Rahman - Software Engineer"
+            content="Jimoh Sherifdeen - Full  Stack Software Engineer"
           />
           <meta
             property="twitter:description"

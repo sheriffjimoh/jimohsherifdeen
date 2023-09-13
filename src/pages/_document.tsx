@@ -28,7 +28,7 @@ export default function Document() {
       <meta property="twitter:url" content="https://jimohsherifdeen.vercel.app" />
       <meta
         property="twitter:title"
-        content="Abdul Rahman - Software Engineer"
+        content="Jimoh Sherifdeen - Full  Stack Software Engineer"
       />
       <meta
         property="twitter:description"
