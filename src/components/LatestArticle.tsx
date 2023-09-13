@@ -33,7 +33,7 @@ export  function LatestArticle({ articles }: singleArticeleProps) {
           <Heading fontSize={{ base: 'xl', md: '2xl' }} fontFamily="Ubuntu" textColor="#ffff">
             📰 Latest Articles.
           </Heading>
-          <NextLink href="/projects">
+          <NextLink href="/blog">
             <Link>
               <Text fontSize={{ base: 'sm', md: 'md' }}>
                 View all articles &rarr;
