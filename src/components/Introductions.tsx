@@ -95,7 +95,7 @@ import {
               <Stack isInline spacing={1}>
                 <Box>💻</Box>
                 <Box>
-                I Love building product, so i can work on both {' '}
+                I love building product, so i can work on both {' '}
                   <Box as="span" color="button1">FrontEnd</Box>, 
                   {' '}
                   <Box as="span" color="button1">BackEnd</Box>
