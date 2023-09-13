@@ -4,6 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import customTheme from '../styles/theme'
 import { Global, css } from '@emotion/react'
 import { prismDarkTheme } from '../styles/prism'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -56,6 +57,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <GlobalStyle>
           <Component {...pageProps} />
         </GlobalStyle>
+        <Analytics />
      </ChakraProvider>
   )
 }
