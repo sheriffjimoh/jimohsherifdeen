@@ -93,7 +93,8 @@ export default function Post({ metadata, source, views } : any) {
               </Stack>
               <Stack>
                 <Text fontSize={['xs', 'xs', 'sm', 'sm']} color="textSecondary">
-                  {metadata.readingTime} &bull; {views} views
+                  {metadata.readingTime} 
+                  {/* &bull; {views} views */}
                 </Text>
               </Stack>
             </Stack>

@@ -44,6 +44,7 @@ export const PostContainer = styled(Stack)`
       border-radius: 0.2rem;
       font-style: italic;
       width: 100%;
+      text-wrap: wrap;
     }
   }
 `
