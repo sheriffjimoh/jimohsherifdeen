@@ -115,7 +115,7 @@ import {
                   </Box>
                   {" "}
                   <Box as="span" >Check out my blogs</Box>
-                  <Link>
+                  <Link href='/blog'>
                      <Box as="span" color="button1">Here</Box>
                   </Link>
                 
