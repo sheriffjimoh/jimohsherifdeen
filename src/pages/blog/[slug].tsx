@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Avatar, Text, Heading, Stack } from '@chakra-ui/react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'

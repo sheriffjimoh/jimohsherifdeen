@@ -56,8 +56,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider resetCSS  theme={customTheme}>
         <GlobalStyle>
           <Component {...pageProps} />
+          <Analytics />
         </GlobalStyle>
-        <Analytics />
      </ChakraProvider>
   )
 }
