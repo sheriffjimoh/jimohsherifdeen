@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
    <Head>
       {/* <title>Jimoh Sherifdeen - Full Stack Software Engineer</title> */}
+      <link rel="icon" href="https://imagizer.imageshack.com/img924/9933/tyfLSE.png" />
       <meta name="title" content="Jimoh Sherifdeen - Full Stack Software Engineer" />
       <meta name="keywords" content="Jimoh  Sherifdeen, Full Stack software engineer, software engineer, frontend developer, mobile developer" />
       <meta
