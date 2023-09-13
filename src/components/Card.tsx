@@ -22,6 +22,7 @@ import {
   FaBootstrap,
   FaDatabase,
   FaPhp,
+  FaVuejs
 } from 'react-icons/fa'
 import {
   SiJquery,
@@ -56,7 +57,7 @@ export  function Card({
 }: cardsProps) {
   const getTag = (tag: any) => {
     let values = []
-    if (tag == 'React') {
+    if (tag == 'React' || tag == 'React.js' ) {
       values[0] = 'blue'
       values[1] = FaReact
     } else if (tag == 'Python') {
@@ -104,6 +105,10 @@ export  function Card({
     else if (tag == 'CSS') {
       values[0] = 'blue'
       values[1] = SiCss3
+    }
+    else if (tag == 'Vue.js') {
+      values[0] = 'green'
+      values[1] = FaVuejs
     }
     else if (tag == 'GraphQL') {
       values[0] = 'pink'
