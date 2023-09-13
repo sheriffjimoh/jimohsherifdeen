@@ -1,5 +1,5 @@
 import { Link, Button, chakra, Heading, Stack, Text } from '@chakra-ui/react'
-import { useMediaQuery , SlideUpWhenVisible } from '@/hooks'
+import { useMediaQuery, SlideUpWhenVisible } from '@/hooks'
 import { FaLinkedin, FaEnvelope, FaFileAlt } from 'react-icons/fa'
 import ReactGA from 'react-ga'
 
@@ -23,7 +23,7 @@ export  function ContactMe() {
         justifyContent="center"
       >
         <SlideUpWhenVisible  threshold={undefined}>
-          <Heading fontSize={{ base: '4xl', md: '5xl' }} textAlign="center">
+          <Heading fontSize={{ base: '4xl', md: '5xl' }} textAlign="center" textColor="#ffff">
             Keep In Touch.
           </Heading>
         </SlideUpWhenVisible>
@@ -59,6 +59,7 @@ Feel free to get in touch and talk more about your projects.
                 position="static"
                 size={isLargerThan800 ? 'md' : 'sm'}
                 color="white"
+                variant="ghost"
               >
                 LinkedIn
               </Button>
@@ -74,6 +75,7 @@ Feel free to get in touch and talk more about your projects.
                 transition="0.3s"
                 position="static"
                 size={isLargerThan800 ? 'md' : 'sm'}
+                variant="ghost"
               >
                 Email
               </Button>
@@ -88,6 +90,7 @@ Feel free to get in touch and talk more about your projects.
                 position="static"
                 size={isLargerThan800 ? 'md' : 'sm'}
                 color="white"
+                variant="ghost"
               >
                 Resume
               </Button>

@@ -63,7 +63,7 @@ export default function Projects({ projects } : projectProps) {
             <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
               Projects
             </Heading>
-            <Text fontSize={{ base: '14px', md: '16px' }}>
+            <Text fontSize={{ base: '14px', md: '16px' }} textColor="#fff">
               I love building projects and practice my engineering skills,
               here&lsquo;s an archive of things that I&lsquo;ve worked on.
             </Text>

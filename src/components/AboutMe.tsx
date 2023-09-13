@@ -62,7 +62,7 @@ import {
           <SlideUpWhenVisible 
           threshold={undefined}>
             <Stack spacing={4}>
-              <Heading fontFamily="Ubuntu" fontSize="2xl">
+              <Heading fontFamily="Ubuntu" fontSize="2xl"  textColor="#ffff">
                 ⚡ About Me
               </Heading>
               <Text

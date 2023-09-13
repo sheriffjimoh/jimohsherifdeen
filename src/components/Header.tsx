@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {
   Button,
   Flex,
@@ -24,6 +24,24 @@ export  function Header({ enableTransition } : any) {
   const isLargerThan768 = useMediaQuery(768)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const firstField = useRef()
+  const [clientWindowHeight, setClientWindowHeight] = useState(0);
+
+
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll); 
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+
+
+
+
+
   const Bracket = styled.span`
     color: #8f9094;
     font-weight: 600;
@@ -87,8 +105,9 @@ export  function Header({ enableTransition } : any) {
           width="100%"
           px="3vw"
           py="3"
-          borderBottom="0.5px solid #1e2029"
-          background={enableTransition ? 'rgba(0,0,0,0.5)' : 'transparent'}
+          borderBottom={ clientWindowHeight > 0 ?  "0.5px solid #fff" : "none"}
+          background={clientWindowHeight > 0 ? '#1e2029' : 'transparent'}
+        
         >
           <NextLink href="/" passHref>
             <Text

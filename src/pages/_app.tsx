@@ -23,11 +23,17 @@ export default function App({ Component, pageProps }: AppProps) {
             }
             html {
               min-width: 356px;
+              color-scheme: dark;
+            }
+            .header{
+              background: red
             }
             #__next {
               display: flex;
               flex-direction: column;
               min-height: 100vh;
+              color-scheme: dark;
+              background: #121a26;
             }
             ::-webkit-scrollbar {
               width: 8px;

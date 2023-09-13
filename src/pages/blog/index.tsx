@@ -64,8 +64,8 @@ export default function Index({ articles }: any) {
         <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
           Blog
         </Heading>
-        <Text fontSize={{ base: '14px', md: '16px' }}>
-          This is where I share my writings on programming, tutorials, and my
+        <Text fontSize={{ base: '14px', md: '16px' }} textColor="#fff">
+          This is where I share my writings on tech, programming, frameworks, and my
           experiences.
         </Text>
         <InputGroup maxW="400px">
@@ -88,34 +88,17 @@ export default function Index({ articles }: any) {
             .map((article: { fields: { date: string; body: string; slug: string; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; summary: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined } }, index: Key | null | undefined) => (
               <Stack
                key={index}
-                direction={isLargerThan1024 ? 'row' : 'column'}
+               
+                direction={'column'}
                 alignItems="flex-start"
                 justifyContent="flex-start"
               >
-                <Text
-                  color="textSecondary"
-                  display={isLargerThan1024 ? 'block' : 'none'}
-                  width={100}
-                  textAlign="right"
+
+              
+                <Flex flexDirection="column" 
+                // px={isLargerThan1024 ? 10 : 0}
+                my="4"
                 >
-                  {dateFormat(Date.parse(article.fields.date), 'mmm d yyyy')}
-                  <br />{' '}
-                  <Text fontSize="sm" textAlign="right">
-                    {readingTime(article.fields.body).text}
-                  </Text>
-                </Text>
-                <Text
-                  color="textSecondary"
-                  fontSize="sm"
-                  display={isLargerThan1024 ? 'none' : 'block'}
-                >
-                  {dateFormat(Date.parse(article.fields.date), 'mmm d yyyy')}{' '}
-                  <Box as="span" fontSize="xs">
-                    &bull;
-                  </Box>{' '}
-                  {readingTime(article.fields.body).text}
-                </Text>
-                <Flex flexDirection="column" px={isLargerThan1024 ? 10 : 0}>
                   <Link href={'/blog/' + article.fields.slug}>
                     
                       <Text
@@ -130,9 +113,20 @@ export default function Index({ articles }: any) {
                         {article.fields.summary}
                       </Text>
 
-                      <Text color="button1" cursor="pointer">
+                      <Flex flexDirection="row" justifyContent="space-between">
+                        
+                        <Text color="button1" cursor="pointer">
                         Learn more &rarr;
-                      </Text>
+                       </Text>
+                       <div>
+                        <Text  fontSize="15px" color="button1" > 
+                          {dateFormat(Date.parse(article.fields.date), 'mmm, d yyyy')}   
+                        </Text>
+                          <Text textColor="#fff">    {readingTime(article.fields.body).text}</Text>
+                        </div>
+                      </Flex>
+
+                      
                 
                   </Link>
                 </Flex>
