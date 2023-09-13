@@ -118,12 +118,12 @@ export default function Index({ articles }: any) {
                         <Text color="button1" cursor="pointer">
                         Learn more &rarr;
                        </Text>
-                       <div>
-                        <Text  fontSize="15px" color="button1" > 
+                       <Flex alignItems={'center'} >
+                        <Text  fontSize="15px" color="button1" mr={'3px'}> 
                           {dateFormat(Date.parse(article.fields.date), 'mmm, d yyyy')}   
                         </Text>
-                          <Text textColor="#fff">    {readingTime(article.fields.body).text}</Text>
-                        </div>
+                          <Text textColor="#fff">  -  {readingTime(article.fields.body).text}</Text>
+                        </Flex>
                       </Flex>
 
                       
