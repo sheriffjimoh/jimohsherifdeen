@@ -95,7 +95,7 @@ import {
               <Stack isInline spacing={1}>
                 <Box>💻</Box>
                 <Box>
-                Currently specializing in {' '}
+                I Love building product, so i can work on both {' '}
                   <Box as="span" color="button1">FrontEnd</Box>, 
                   {' '}
                   <Box as="span" color="button1">BackEnd</Box>
@@ -111,13 +111,14 @@ import {
               <Stack isInline spacing={1}>
                   <Box>✍️</Box>
                   <Box>
-                  I also have a strong passion for technical content writing 
-                  </Box>
-                  {" "}
-                  <Box as="span" >Check out my blogs</Box>
-                  <Link href='/blog'>
+                  I also have a strong passion for technical content writing, Check out my articles 
+                  {' '}
+                   <Link href='/blog'>
                      <Box as="span" color="button1">Here</Box>
-                  </Link>
+                  </Link> 
+                  </Box>
+                 
+                
                 
               </Stack>
             </Text>
