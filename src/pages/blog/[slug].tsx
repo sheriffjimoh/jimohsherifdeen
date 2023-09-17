@@ -7,7 +7,7 @@ import { ArticleJsonLd, NextSeo } from 'next-seo'
 import mdxPrism from 'mdx-prism'
 import dateFormat from 'dateformat'
 import { getReadTime } from '@/hooks';
-import { Image, Container, PostContainer } from '@/components'
+import { Image, Container, PostContainer, LazyImage } from '@/components'
 
 interface blogProps {
   title: string,
@@ -112,17 +112,12 @@ export default function Post({ metadata }: { metadata: blogProps }) {
               border="1px"
               borderColor={{ base: '#333', md: 'borderColor' }}
             >
-              <Image
+              <LazyImage
                 src={metadata.image}
-                borderRadius="10px"
                 width={1366}
                 height={892}
-                w="auto"
-                h="auto"
-                mx="auto"
                 alt=""
-                priority
-              ></Image>
+              ></LazyImage>
             </Stack>
             <PostContainer>
               {documentToReactComponents(metadata.body)}

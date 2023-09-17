@@ -37,7 +37,7 @@ import { SiNextdotjs, SiChakraui } from 'react-icons/si'
 import { useMediaQuery }  from '../hooks'
 import ReactGA from 'react-ga'
 
-import { Image }  from '@/components'
+import { Image, LazyImage}  from '@/components'
 
 
 export interface cardsProps{
@@ -164,16 +164,12 @@ export  function Card({
     >
       <Link href={deployLink} isExternal>
         <ScaleFade in={true} >
-          <Image
+          <LazyImage
             width={1250}
             height={600}
-            w="auto"
-            h="auto"
             src={imageURL}
-            transition="0.3s"
-            borderRadius="10px 10px 0px 0px"
             alt="project image"
-          ></Image>
+          ></LazyImage>
           <Stack px={4} py={2}>
             <Stack isInline justifyContent="space-between" alignItems="center">
               <Text fontFamily="Ubuntu" fontSize="2xl" color="displayColor">

@@ -9,3 +9,4 @@ export * from './ContactMe';
 export  * from  './ChakraNextImage'
 export * from  './MDXComponents';
 export * from './PostContainer';
+export * from './LazyImage';
