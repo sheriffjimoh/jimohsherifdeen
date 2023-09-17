@@ -20,6 +20,8 @@ export interface singleArticeleProps{
 }
 export  function LatestArticle({ articles }: singleArticeleProps) {
 
+  console.log("article.fields.body::", readingTime(articles[0].fields.body))
+
   return (
     <Stack
       spacing={5}
@@ -82,7 +84,7 @@ export  function LatestArticle({ articles }: singleArticeleProps) {
                   <Box as="span" fontSize="xs">
                     &bull;
                   </Box>{' '}
-                  {readingTime(article.fields.body).text}
+                  {/* {readingTime(article.fields.body).text} */}
                  
                 </Text>
               </Stack>

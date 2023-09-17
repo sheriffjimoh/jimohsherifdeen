@@ -29,8 +29,10 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiCss3,
-  SiGraphql
+  SiGraphql,
+  SiRedux
 } from 'react-icons/si'
+import { MdOutlinePayment } from 'react-icons/md'
 import { SiNextdotjs, SiChakraui } from 'react-icons/si'
 import { useMediaQuery }  from '../hooks'
 import ReactGA from 'react-ga'
@@ -57,7 +59,7 @@ export  function Card({
 }: cardsProps) {
   const getTag = (tag: any) => {
     let values = []
-    if (tag == 'React' || tag == 'React.js' ) {
+    if (tag == 'React' || tag == 'React.js' || tag == 'ReactNative' || tag == 'Expo ReactNative' ) {
       values[0] = 'blue'
       values[1] = FaReact
     } else if (tag == 'Python') {
@@ -114,6 +116,17 @@ export  function Card({
       values[0] = 'pink'
       values[1] = SiGraphql
     }
+    else if (tag == 'Redux') {
+      values[0] = 'purple'
+      values[1] = SiRedux
+    }
+
+    else if (tag == 'POS') {
+      values[0] = 'yellow'
+      values[1] =  MdOutlinePayment
+    }
+
+   
     else {
       values[0] = 'gray'
       values[1] = FaCode

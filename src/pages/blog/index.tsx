@@ -122,7 +122,7 @@ export default function Index({ articles }: any) {
                         <Text  fontSize="15px" color="button1" mr={'3px'}> 
                           {dateFormat(Date.parse(article.fields.date), 'mmm, d yyyy')}   
                         </Text>
-                          <Text textColor="#fff">  -  {readingTime(article.fields.body).text}</Text>
+                          {/* <Text textColor="#fff">  -  {readingTime(article.fields.body).text}</Text> */}
                         </Flex>
                       </Flex>
 

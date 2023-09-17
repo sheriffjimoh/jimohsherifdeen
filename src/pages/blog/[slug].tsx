@@ -12,7 +12,7 @@ import readingTime from 'reading-time'
 import { Image, Container, PostContainer, MDXComponents } from '@/components'
 
 export default function Post({ metadata, source, views } : any) {
-
+  // console.log("metadata::", documentToReactComponents(metadata.body))
   return (
     <>
       <NextSeo
@@ -93,7 +93,8 @@ export default function Post({ metadata, source, views } : any) {
               </Stack>
               <Stack>
                 <Text fontSize={['xs', 'xs', 'sm', 'sm']} color="textSecondary">
-                  {metadata.readingTime} 
+                  {/* {metadata.readingTime}  */}
+                  {/* {readingTime()} */}
                   {/* &bull; {views} views */}
                 </Text>
               </Stack>
@@ -119,7 +120,6 @@ export default function Post({ metadata, source, views } : any) {
             </Stack>
             <PostContainer>
               {documentToReactComponents(metadata.body)}
-              {/* <MDXRemote {...source} components={MDXComponents} /> */}
             </PostContainer>
           </Stack>
         </Stack>

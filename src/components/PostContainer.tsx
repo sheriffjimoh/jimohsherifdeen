@@ -21,6 +21,10 @@ export const PostContainer = styled(Stack)`
       border-left: 0.25em solid;
       border-color: #3ccf91;
       background: #080808;
+      text-wrap: wrap;
+      white-space: pre-wrap; /* Allow text to wrap */
+      word-break: break-word; /* Break words when needed */
+      overflow-x: auto; /* Add horizontal scroll if needed for small screens */
     }
     blockquote p {
       font-style: italic;
@@ -37,7 +41,7 @@ export const PostContainer = styled(Stack)`
       font-size: 2rem;
       font-weight: 600;
     }
-    code{
+   p code,  code{
       background: #080808;
       color: #3ccf91;
       padding: 0.2rem 0.4rem;
@@ -45,6 +49,12 @@ export const PostContainer = styled(Stack)`
       font-style: italic;
       width: 100%;
       text-wrap: wrap;
+      white-space: pre-wrap; /* Allow text to wrap */
+      word-break: break-word; /* Break words when needed */
+     overflow-x: auto; /* Add horizontal scroll if needed for small screens */
+    }
+    p{
+      color: white
     }
   }
 `
