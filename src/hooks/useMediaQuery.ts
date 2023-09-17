@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
 
-export const useMediaQuery = (width) => {
+export const useMediaQuery = (width: unknown) => {
   const [targetReached, setTargetReached] = useState(false)
 
-  const updateTarget = useCallback((e) => {
+  const updateTarget = useCallback((e: { matches: any }) => {
     if (e.matches) {
       setTargetReached(true)
     } else {

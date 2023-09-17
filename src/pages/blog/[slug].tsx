@@ -4,15 +4,23 @@ import { MDXRemote } from 'next-mdx-remote'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { ArticleJsonLd, NextSeo } from 'next-seo'
-
 import mdxPrism from 'mdx-prism'
 import dateFormat from 'dateformat'
-import readingTime from 'reading-time'
+import { getReadTime } from '@/hooks';
+import { Image, Container, PostContainer } from '@/components'
 
-import { Image, Container, PostContainer, MDXComponents } from '@/components'
+interface blogProps {
+  title: string,
+  slug: string,
+  date: string,
+  summary: string,
+  body: any,
+  image: string,
+  readingTime: string
+}
 
-export default function Post({ metadata, source, views } : any) {
-  // console.log("metadata::", documentToReactComponents(metadata.body))
+export default function Post({ metadata }: { metadata: blogProps }) {
+ 
   return (
     <>
       <NextSeo
@@ -93,9 +101,7 @@ export default function Post({ metadata, source, views } : any) {
               </Stack>
               <Stack>
                 <Text fontSize={['xs', 'xs', 'sm', 'sm']} color="textSecondary">
-                  {/* {metadata.readingTime}  */}
-                  {/* {readingTime()} */}
-                  {/* &bull; {views} views */}
+                  {metadata.readingTime} 
                 </Text>
               </Stack>
             </Stack>
@@ -153,7 +159,7 @@ export async function getStaticProps({ params }: any) {
 
   const article = data.items[0].fields
   const source = article.body
-  article.readingTime = readingTime(source).text
+  article.readingTime = getReadTime(source)
   
   const mdxSource = await serialize(source, {
     mdxOptions: {
@@ -161,17 +167,11 @@ export async function getStaticProps({ params }: any) {
     },
   })
 
-  // const views = await fetch(
-  //   `${process.env.NEXT_PUBLIC_BASE_URL}/api/views/${params.slug}`,
-  // )
-  //   .then((res) => res.json())
-  //   .then((json) => json.views)
 
   return {
     props: {
       metadata: article,
-      source: mdxSource,
-      views:  0,
+      source: mdxSource
     },
     revalidate: 30,
   }

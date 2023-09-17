@@ -5,8 +5,7 @@ import Link from 'next/link'
 import { Container }  from '@/components'
 import { FaSearch } from 'react-icons/fa'
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/input'
-import { useMediaQuery }  from '@/hooks'
-import readingTime from 'reading-time'
+import { useMediaQuery, getReadTime}  from '@/hooks'
 import dateFormat from 'dateformat'
 
 export default function Index({ articles }: any) {
@@ -85,7 +84,7 @@ export default function Index({ articles }: any) {
             .filter((e: { fields: { title: string } }) =>
               e.fields.title.toLowerCase().includes(query.toLowerCase()),
             )
-            .map((article: { fields: { date: string; body: string; slug: string; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; summary: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined } }, index: Key | null | undefined) => (
+            .map((article: { fields: { date: string; body: any; slug: string; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; summary: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined } }, index: Key | null | undefined) => (
               <Stack
                key={index}
                
@@ -122,7 +121,7 @@ export default function Index({ articles }: any) {
                         <Text  fontSize="15px" color="button1" mr={'3px'}> 
                           {dateFormat(Date.parse(article.fields.date), 'mmm, d yyyy')}   
                         </Text>
-                          {/* <Text textColor="#fff">  -  {readingTime(article.fields.body).text}</Text> */}
+                          <Text textColor="#fff">  -  {getReadTime(article.fields.body)}</Text>
                         </Flex>
                       </Flex>
 
