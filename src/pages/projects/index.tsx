@@ -19,25 +19,25 @@ export default function Projects({ projects } : projectProps) {
           <meta name="title" content="Jimoh Sherifdeen - Full  Stack Software Engineer" />
           <meta
             name="description"
-            content="Software Engineer based in Indonesia, an undergraduate student at Universitas Negeri Surabaya."
+            content="As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape.."
           />
 
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://abdulrahman.id/projects" />
+          <meta property="og:url" content="https://jimohsherifdeen.vercel.app/projects" />
           <meta
             property="og:title"
             content="Jimoh Sherifdeen - Full  Stack Software Engineer"
           />
           <meta
             property="og:description"
-            content="Software Engineer based in Indonesia, an undergraduate student at Universitas Negeri Surabaya."
+            content="As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape.."
           />
-          <meta property="og:image" content="https://imagizer.imageshack.com/a/img923/3917/IFUVhm.png" />
+          <meta property="og:image" content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:url"
-            content="https://abdulrahman.id/projects"
+            content="https://jimohsherifdeen.vercel.app/projects"
           />
           <meta
             property="twitter:title"
@@ -45,11 +45,11 @@ export default function Projects({ projects } : projectProps) {
           />
           <meta
             property="twitter:description"
-            content="Software Engineer based in Indonesia, an undergraduate student at Universitas Negeri Surabaya."
+            content="As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape.."
           />
           <meta
             property="twitter:image"
-            content="https://imagizer.imageshack.com/a/img923/3917/IFUVhm.png"
+            content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png"
           />
         </Head>
         <Stack
