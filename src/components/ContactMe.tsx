@@ -15,9 +15,8 @@ export  function ContactMe() {
     <>
       <Stack
         spacing={10}
-        mt='190px'
-        mb={{ md: '70px'}}
-       h={{ md: "100%", base: '60vh'}}
+        mb={{ md: '70px', base: '40px'}}
+       h={{ md: "100%", base: '100%'}}
         w="100%"
         alignItems="center"
         justifyContent="center"
@@ -81,7 +80,7 @@ Feel free to get in touch and talk more about your projects.
               </Button>
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1PUxFIIeTQNENj-T5UIcFoHGBYmgKB489/view?usp=sharing"
+              href="https://drive.google.com/file/d/1-VOdDKjzzlP5ghJazu0y-7vXg6fvckW6/view?usp=sharing"
               isExternal
               onClick={() => handleClick('contact_resume')}
             >

@@ -24,8 +24,9 @@ export  function LatestArticle({ articles }: singleArticeleProps) {
     <Stack
       spacing={5}
       w="100%"
-      h={100}
+      h="100%"
       display={articles.length < 2 ? 'none' : 'block'}
+      mb={{ base: '10px' }}
     >
       <SlideUpWhenVisible 
        threshold={undefined}>
