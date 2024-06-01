@@ -45,14 +45,15 @@ export async function getStaticProps() {
   let articles = await client.getEntries({
     content_type: 'blogPosts',
     limit: 4,
-    order: 'sys.createdAt',
-  })
+    order: '-sys.createdAt',
+  });
+  
 
-  let introduction = await client.getEntries({
-    content_type: 'introduction',
-    limit: 2,
-    order: 'sys.createdAt',
-  })
+  // let introduction = await client.getEntries({
+  //   content_type: 'introduction',
+  //   limit: 2,
+  //   order: 'sys.createdAt',
+  // })
 
 
 

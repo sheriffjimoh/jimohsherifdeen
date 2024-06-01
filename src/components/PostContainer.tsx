@@ -41,18 +41,35 @@ export const PostContainer = styled(Stack)`
       font-size: 2rem;
       font-weight: 600;
     }
-   p code,  code{
-      background: #080808;
-      color: #3ccf91;
-      padding: 0.2rem 0.4rem;
-      border-radius: 0.2rem;
-      font-style: italic;
-      width: 100%;
-      text-wrap: wrap;
-      white-space: pre-wrap; /* Allow text to wrap */
+    p code,
+    code {
+      background: #2e2e2e; /* Dark background color */
+      color: #3ccf91; /* Light green text color for readability */
+      padding: 0.4rem 0.6rem; /* Adequate padding for readability */
+      border-radius: 0.3rem; /* Rounded corners */
+      font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+      font-size: 1rem; /* Base font size */
+      white-space: pre-wrap; /* Preserve whitespace and allow text to wrap */
       word-break: break-word; /* Break words when needed */
-     overflow-x: auto; /* Add horizontal scroll if needed for small screens */
+      overflow-x: auto; /* Add horizontal scroll if needed for small screens */
+      display: block; /* Ensure the code block spans the full width */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
     }
+    
+    /* Optional: Add a custom scrollbar for better UX */
+    code::-webkit-scrollbar {
+      height: 8px;
+    }
+    
+    code::-webkit-scrollbar-thumb {
+      background-color: #3ccf91;
+      border-radius: 4px;
+    }
+    
+    code::-webkit-scrollbar-track {
+      background: #2b2b2b;
+    }
+    
     p{
       color: white
     }
