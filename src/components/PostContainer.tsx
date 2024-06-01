@@ -73,6 +73,16 @@ export const PostContainer = styled(Stack)`
     p{
       color: white
     }
+  p  a {
+  color: #1e90ff; /* Dodger Blue color */
+  text-decoration: underline; /* Underline text */
+}
+
+  p a:hover {
+  color: #104e8b; /* Darker blue for hover */
+  text-decoration: underline; /* Ensure underline remains on hover */
+  }
+
   }
 `
 
