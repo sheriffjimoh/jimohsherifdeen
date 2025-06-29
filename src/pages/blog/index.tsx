@@ -153,5 +153,6 @@ export async function getStaticProps() {
     props: {
       articles: articles.items,
     },
+    revalidate: 60
   }
 }
