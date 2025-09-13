@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     res.setHeader('Content-Type', 'text/plain')
-    res.write(`User-agent: *
+    res.send(`User-agent: *
   Allow: /
   
   User-agent: GPTBot
@@ -10,5 +10,4 @@ export default function handler(req, res) {
   Allow: /
   
   Sitemap: https://jimohsherifdeen.vercel.app/sitemap.xml`)
-    res.end()
   }
