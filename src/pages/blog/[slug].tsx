@@ -65,7 +65,7 @@ export default function Post({ metadata }: { metadata: blogProps }) {
         dateModified={metadata.date}
         authorName="Jimoh Sherifdeen"
         publisherName="Jimoh Sherifdeen"
-        publisherLogo="https://imagizer.imageshack.com/img923/2757/2RJKn5.png"
+        publisherLogo="https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg"
         description={metadata.summary}
       />
       <Container>
@@ -91,7 +91,7 @@ export default function Post({ metadata }: { metadata: blogProps }) {
                 <Avatar
                   name="Jimoh Sherifdeen"
                   size="xs"
-                  src="https://imagizer.imageshack.com/img923/2757/2RJKn5.png"
+                  src="https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg"
                   border="1px solid textPrimary"
                 />
                 <Text fontSize={['xs', 'xs', 'sm', 'sm']} color="textPrimary">

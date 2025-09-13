@@ -105,7 +105,7 @@ export default function Projects({ projects } : projectProps) {
             property="og:description"
             content="Explore my software engineering projects showcasing full-stack development skills. From web applications to mobile solutions, discover innovative projects built with modern technologies."
           />
-          <meta property="og:image" content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png" />
+          <meta property="og:image" content="https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta
@@ -122,7 +122,7 @@ export default function Projects({ projects } : projectProps) {
           />
           <meta
             property="twitter:image"
-            content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png"
+            content="https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg"
           />
 
           {/* Projects Collection Structured Data */}

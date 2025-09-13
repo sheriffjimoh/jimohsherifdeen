@@ -23,7 +23,7 @@ export default function Document() {
           property="og:description"
           content="As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape."
         />
-        <meta property="og:image" content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png" />
+        <meta property="og:image" content="https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg" />
         
         {/* Twitter Card Meta Tags */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -38,7 +38,7 @@ export default function Document() {
         />
         <meta
           property="twitter:image"
-          content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png"
+          content="https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg"
         />
 
         {/* JSON-LD Structured Data for AI Crawlers */}
@@ -52,7 +52,7 @@ export default function Document() {
               "jobTitle": "Full Stack Software Engineer",
               "description": "As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape.",
               "url": "https://jimohsherifdeen.vercel.app/",
-              "image": "https://imagizer.imageshack.com/img923/2757/2RJKn5.png",
+              "image": "https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg",
               "sameAs": [
                 // Add your social media profiles here
                 // "https://linkedin.com/in/your-profile",

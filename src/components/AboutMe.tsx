@@ -58,7 +58,7 @@ import {
   
     return (
       <>
-        <SimpleGrid columns={{ base: 1, md: 1 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
           <SlideUpWhenVisible 
           threshold={undefined}>
             <Stack spacing={4}>
@@ -114,7 +114,7 @@ import {
               </Text>
             </Stack>
           </SlideUpWhenVisible>
-          {/* <SlideUpWhenVisible
+          <SlideUpWhenVisible
            threshold={undefined}>
             <Flex alignItems="center" justifyContent="center" position="relative">
               <Box
@@ -132,7 +132,7 @@ import {
                   alt=""
                 />
                 <Image
-                  src="https://imagizer.imageshack.com/img923/2757/2RJKn5.png"
+                  src="https://res.cloudinary.com/dy9yoeiq2/image/upload/v1757781139/1707894377337_ccmxx2.jpg"
                   w={{ base: '300px', lg: '350px' }}
                   h={{ base: '300px', lg: '350px' }}
                   borderRadius="50%"
@@ -140,7 +140,7 @@ import {
                 />
               </Box>
             </Flex>
-          </SlideUpWhenVisible> */}
+          </SlideUpWhenVisible>
         </SimpleGrid>
       </>
     )
