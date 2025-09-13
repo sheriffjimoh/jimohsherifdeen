@@ -11,26 +11,99 @@ export default function Projects({ projects } : projectProps) {
     setQuery(e.target.value)
   }
 
+  // Generate structured data for projects
+  const projectsStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Jimoh Sherifdeen - Software Projects Portfolio",
+    "description": "A collection of software engineering projects showcasing full-stack development skills, web applications, and technical expertise by Jimoh Sherifdeen",
+    "url": "https://jimohsherifdeen.vercel.app/projects",
+    "author": {
+      "@type": "Person",
+      "name": "Jimoh Sherifdeen",
+      "jobTitle": "Full Stack Software Engineer"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": projects?.items?.length || 0,
+      "itemListElement": projects?.items?.map((project: any, index: number) => ({
+        "@type": "CreativeWork",
+        "position": index + 1,
+        "name": project.fields.title,
+        "description": project.fields.description,
+        "url": project.fields.deployLink || project.fields.githubLink,
+        "image": project.fields.imgUrl,
+        "creator": {
+          "@type": "Person",
+          "name": "Jimoh Sherifdeen"
+        },
+        "keywords": project.fields.tags?.join(", ") || "web development, software engineering",
+        "programmingLanguage": project.fields.tags || [],
+        "codeRepository": project.fields.githubLink
+      })) || []
+    }
+  }
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jimohsherifdeen.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://jimohsherifdeen.vercel.app/projects"
+      }
+    ]
+  }
+
+  const softwareApplicationData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Software Projects by Jimoh Sherifdeen",
+    "description": "Browse through a curated collection of software projects demonstrating full-stack development capabilities, including web applications, mobile apps, and innovative solutions",
+    "url": "https://jimohsherifdeen.vercel.app/projects",
+    "author": {
+      "@type": "Person",
+      "name": "Jimoh Sherifdeen",
+      "jobTitle": "Full Stack Software Engineer"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Software Development Portfolio",
+      "description": "Full-stack software development projects"
+    },
+    "keywords": "software projects, web development, full stack engineer, portfolio, JavaScript, React, Node.js",
+    "inLanguage": "en-US"
+  }
+
   return (
     <>
       <Container>
         <Head>
-          <title>Jimoh Sherifdeen - Full  Stack Software Engineer</title>
-          <meta name="title" content="Jimoh Sherifdeen - Full  Stack Software Engineer" />
+          <title>Projects - Jimoh Sherifdeen | Full Stack Software Engineer Portfolio</title>
+          <meta name="title" content="Projects - Jimoh Sherifdeen | Full Stack Software Engineer" />
           <meta
             name="description"
-            content="As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape.."
+            content="Explore my software engineering projects showcasing full-stack development skills. From web applications to mobile solutions, discover the innovative projects I've built using modern technologies."
           />
+          <meta name="keywords" content="software projects, web development portfolio, full stack projects, React projects, Node.js applications, JavaScript developer, Jimoh Sherifdeen projects" />
 
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://jimohsherifdeen.vercel.app/projects" />
           <meta
             property="og:title"
-            content="Jimoh Sherifdeen - Full  Stack Software Engineer"
+            content="Projects - Jimoh Sherifdeen | Full Stack Software Engineer"
           />
           <meta
             property="og:description"
-            content="As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape.."
+            content="Explore my software engineering projects showcasing full-stack development skills. From web applications to mobile solutions, discover innovative projects built with modern technologies."
           />
           <meta property="og:image" content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png" />
 
@@ -41,17 +114,42 @@ export default function Projects({ projects } : projectProps) {
           />
           <meta
             property="twitter:title"
-            content="Jimoh Sherifdeen - Full  Stack Software Engineer"
+            content="Projects - Jimoh Sherifdeen | Full Stack Software Engineer"
           />
           <meta
             property="twitter:description"
-            content="As a full-stack engineer, I'm passionate about translating ideas into robust, user-friendly products. I thrive on problem-solving, leveraging both front-end and back-end skills. Networking and continuous learning are integral to my journey, driving innovation and growth in the ever-evolving tech landscape.."
+            content="Explore my software engineering projects showcasing full-stack development skills. From web applications to mobile solutions, discover innovative projects built with modern technologies."
           />
           <meta
             property="twitter:image"
             content="https://imagizer.imageshack.com/img923/2757/2RJKn5.png"
           />
+
+          {/* Projects Collection Structured Data */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(projectsStructuredData)
+            }}
+          />
+
+          {/* Breadcrumb Structured Data */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbStructuredData)
+            }}
+          />
+
+          {/* Web Page Structured Data */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(softwareApplicationData)
+            }}
+          />
         </Head>
+
         <Stack
           spacing={10}
           justifyContent="center"
@@ -59,7 +157,6 @@ export default function Projects({ projects } : projectProps) {
           my={['15vh', '15vh', '22.5vh', '22.5vh']}
         >
           <Stack spacing={5}>
-            {' '}
             <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
               Projects
             </Heading>
@@ -68,24 +165,26 @@ export default function Projects({ projects } : projectProps) {
               here&lsquo;s an archive of things that I&lsquo;ve worked on.
             </Text>
             <InputGroup maxW="400px">
-              <InputRightElement pointerEvents="none" >
-                  <FaSearch />
+              <InputRightElement pointerEvents="none">
+                <FaSearch />
               </InputRightElement>
               <Input
                 type="text"
                 placeholder="Search projects"
                 value={query}
                 onChange={handleChange}
+                aria-label="Search through projects"
               />
             </InputGroup>
             <Divider />
           </Stack>
+          
           <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8}>
             {projects.items
               .filter((e: { fields: { title: string } }) =>
                 e.fields.title.toLowerCase().includes(query.toLowerCase()),
               )
-              .map((project: { fields: { title: string, imgUrl: string, description: string, githubLink: string, deployLink: string,tags: [] } }) => (
+              .map((project: { fields: { title: string, imgUrl: string, description: string, githubLink: string, deployLink: string, tags: [] } }) => (
                 <Card
                   key={project.fields.title}
                   imageURL={project.fields.imgUrl}

@@ -116,7 +116,7 @@ export  function Header({ enableTransition } : any) {
               fontWeight="bold"
               fontSize="32px"
             >
-              <Bracket>&lt;</Bracket>Jimoh<Bracket> /&gt;</Bracket>
+              <Bracket>&lt;</Bracket>JS<Bracket> /&gt;</Bracket>
             </Text>
           </NextLink>
           {isLargerThan768 ? (
