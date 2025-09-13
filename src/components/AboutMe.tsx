@@ -58,7 +58,7 @@ import {
   
     return (
       <>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 1 }} spacing={8}>
           <SlideUpWhenVisible 
           threshold={undefined}>
             <Stack spacing={4}>
@@ -114,7 +114,7 @@ import {
               </Text>
             </Stack>
           </SlideUpWhenVisible>
-          <SlideUpWhenVisible
+          {/* <SlideUpWhenVisible
            threshold={undefined}>
             <Flex alignItems="center" justifyContent="center" position="relative">
               <Box
@@ -140,7 +140,7 @@ import {
                 />
               </Box>
             </Flex>
-          </SlideUpWhenVisible>
+          </SlideUpWhenVisible> */}
         </SimpleGrid>
       </>
     )

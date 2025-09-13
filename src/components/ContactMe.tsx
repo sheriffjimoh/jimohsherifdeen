@@ -80,7 +80,7 @@ Feel free to get in touch and talk more about your projects.
               </Button>
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1-VOdDKjzzlP5ghJazu0y-7vXg6fvckW6/view?usp=sharing"
+              href="https://drive.google.com/file/d/1a3vRjY76ePrZG-KDzEWiQAqiLQQDv2ue/view?usp=sharing"
               isExternal
               onClick={() => handleClick('contact_resume')}
             >
