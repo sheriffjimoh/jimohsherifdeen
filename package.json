@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -29,6 +29,7 @@
     "next": "13.4.19",
     "next-mdx-remote": "^4.4.1",
     "next-seo": "^6.1.0",
+    "next-sitemap": "^4.2.3",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
