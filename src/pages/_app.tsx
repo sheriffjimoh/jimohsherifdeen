@@ -5,6 +5,7 @@ import customTheme from '../styles/theme'
 import { Global, css } from '@emotion/react'
 import { prismDarkTheme } from '../styles/prism'
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -55,6 +56,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider resetCSS  theme={customTheme}>
         <GlobalStyle>
+          <SpeedInsights />
           <Component {...pageProps} />
           <Analytics />
         </GlobalStyle>
