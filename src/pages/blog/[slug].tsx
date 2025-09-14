@@ -138,11 +138,17 @@ export async function getStaticPaths() {
   let data = await client.getEntries({
     content_type: 'blogPosts',
   })
+
+
+  if (!data.items || !data.items.length) {
+    return { notFound: true } 
+  }
+
   return {
     paths: data.items.map((item: { fields: { slug: any } }) => ({
-      params: { slug: item.fields.slug },
+      params: { slug: item.fields?.slug },
     })),
-    fallback: false,
+    fallback: true,
   }
 }
 
