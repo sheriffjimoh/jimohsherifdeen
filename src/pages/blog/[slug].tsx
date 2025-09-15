@@ -59,7 +59,7 @@ export default function Post({ metadata }: { metadata: blogProps }) {
       />
       <ArticleJsonLd
         url={`https://jimohsherifdeen.vercel.app/blog/${metadata.slug}`}
-        title={metadata.title}
+        title={metadata?.title}
         images={[metadata.image]}
         datePublished={metadata.date}
         dateModified={metadata.date}
@@ -141,6 +141,7 @@ export async function getStaticPaths() {
 
 
   if (!data.items || !data.items.length) {
+    console.error("No post found for slug:",)
     return { notFound: true } 
   }
 
@@ -148,7 +149,7 @@ export async function getStaticPaths() {
     paths: data.items.map((item: { fields: { slug: any } }) => ({
       params: { slug: item.fields?.slug },
     })),
-    fallback: true,
+    fallback: false,
   }
 }
 
