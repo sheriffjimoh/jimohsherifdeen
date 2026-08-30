@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function App({ Component, pageProps }: AppProps) {
 
-  const GlobalStyle = ({ children } : any) => {
+const GlobalStyle = ({ children } : any) => {
     return (
       <>
         <Global
@@ -51,7 +51,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {children}
       </>
     )
-  }
+}
 
   return (
     <ChakraProvider resetCSS  theme={customTheme}>
