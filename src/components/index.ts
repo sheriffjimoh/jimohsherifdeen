@@ -10,3 +10,7 @@ export  * from  './ChakraNextImage'
 export * from  './MDXComponents';
 export * from './PostContainer';
 export * from './LazyImage';
+export * from './Hero';
+export * from './Navbar';
+export * from './Marquee';
+export * from './About';

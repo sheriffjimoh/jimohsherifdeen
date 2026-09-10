@@ -10,7 +10,7 @@ import { createBreakpoints } from '@chakra-ui/theme-tools'
 //         ZZ = Minimum font-size stated in REM
 
 const config = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: false,
 }
 

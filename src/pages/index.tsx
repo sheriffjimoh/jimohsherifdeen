@@ -1,7 +1,4 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Container, Introduction, AboutMe, FeaturedProjects, LatestArticle,ContactMe }  from '@/components'
-import { Stack } from '@chakra-ui/react'
+import { Hero, Navbar, Marquee, About }  from '@/components'
 import Head from 'next/head'
 
 export default function Home({ projects, articles }: any) {
@@ -11,22 +8,11 @@ export default function Home({ projects, articles }: any) {
         <title>Jimoh Sherifdeen - Full Stack Software Engineer</title> 
      </Head>
 
-    <Container enableTransition={true} >
-          <Stack
-            as="main"
-            spacing={{md: "120px", base: "64px"}}
-            justifyContent="center"
-            alignItems="flex-start"
-            px={{ base: '5vw', md: '10vw' }}
-            mt={{ base: '15vh', md: '22.5vh' }}
-          >
-              <Introduction  />
-              <AboutMe />
-              <FeaturedProjects projects={projects} />
-              <LatestArticle articles={articles} />
-              <ContactMe /> 
-          </Stack>
-      </Container>
+        <Navbar />
+        <Hero />
+        <Marquee />
+        <About />
+            
     </>
   )
 }
