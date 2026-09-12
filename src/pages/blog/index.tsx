@@ -170,9 +170,9 @@ export default function Index({ articles }: { articles: Article[] }) {
                 >
                   <div className="flex items-center gap-3 sm:w-40 shrink-0">
                     <span className="font-mono text-sm text-ink-300">{String(i + 2).padStart(2, '0')}</span>
-                    {/* <span className="rounded-md bg-brand-500/10 px-2 py-0.5 font-mono text-xs text-brand-600">
-                      {article.category}
-                    </span> */}
+                    <span className="rounded-md bg-brand-500/10 px-2 py-0.5 font-mono text-xs text-brand-600">
+                     Tech & Programming
+                    </span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-bold leading-snug text-ink-900 transition-colors group-hover:text-brand-600 lg:text-xl">

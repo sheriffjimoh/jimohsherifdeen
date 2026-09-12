@@ -98,16 +98,15 @@ export  function Projects({ projects }: { projects: projectProps }) {
 
 
   return (
-    <section id="projects" className="relative py-28 lg:py-36">
+    <section id="works" className="relative py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* Header */}
-        <div className="reveal flex items-center gap-3 mb-6">
-          <span className="font-mono text-sm text-brand-500">02</span>
+        <div className="flex items-center gap-3 mb-6">
           <div className="h-px w-12 bg-brand-500/40" />
           <span className="text-sm uppercase tracking-widest text-ink-400">Selected Work</span>
         </div>
 
-        <div className="reveal flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <h2 className="text-3xl font-bold leading-tight text-ink-900 sm:text-5xl">
             Things I've{' '}
             <span className="font-display italic font-normal text-brand-500">built</span>
@@ -119,7 +118,7 @@ export  function Projects({ projects }: { projects: projectProps }) {
         </div>
 
         {/* Filters */}
-        <div className="reveal mt-10 flex flex-wrap gap-2">
+        <div className=" mt-10 flex flex-wrap gap-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
@@ -141,7 +140,7 @@ export  function Projects({ projects }: { projects: projectProps }) {
           {filtered?.map((project, i) => (
             <div
               key={project.id}
-              className="reveal"
+              className=""
               style={{ transitionDelay: `${(i % 4) * 60}ms` }}
             >
               <BentoCard
@@ -155,7 +154,7 @@ export  function Projects({ projects }: { projects: projectProps }) {
           {filteredItems?.map((project, index) => (
             <div
               key={`${project.fields.title}-${index}`}
-              className="reveal"
+              className=""
               style={{ transitionDelay: `${(index % 4) * 60}ms` }}
             >
               <BentoCard
@@ -175,7 +174,7 @@ export  function Projects({ projects }: { projects: projectProps }) {
     filteredItems.map((project, index) => (
       <div
         key={`${filter}-${project.fields.title}-${index}`}
-        className="reveal visible"
+        className=" visible"
       >
         <BentoCard
           project={project.fields}

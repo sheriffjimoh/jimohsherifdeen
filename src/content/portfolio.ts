@@ -76,9 +76,9 @@ export const profile: Profile = {
   email: 'jimohsherifdeen@gmail.com',
   status: 'Available for new opportunities',
   social: [
-    { label: 'GitHub', url: 'https://github.com/jimohsherifdeen', icon: 'github' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/jimohsherifdeen', icon: 'linkedin' },
-    { label: 'Twitter', url: 'https://twitter.com/jimohsherifdeen', icon: 'twitter' },
+    { label: 'GitHub', url: 'https://github.com/sheriffjimoh', icon: 'github' },
+    { label: 'LinkedIn', url: 'https://linkedin.com/in/jimoh-sherifdeen-fullstack-developer', icon: 'linkedin' },
+    { label: 'Twitter', url: 'https://twitter.com/Sherifdeenolat2', icon: 'twitter' },
     { label: 'Email', url: 'mailto:jimohsherifdeen@gmail.com', icon: 'mail' },
   ],
   stats: [

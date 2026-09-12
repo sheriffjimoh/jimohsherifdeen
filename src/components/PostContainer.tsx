@@ -1,88 +1,39 @@
-import styled from '@emotion/styled'
-import { Stack } from '@chakra-ui/react'
+import { ReactNode } from 'react';
 
-export const PostContainer = styled(Stack)`
-  &&& {
-    padding-top: 24px;
-    font-size: 16px;
-    * {
-      box-sizing: border-box;
-      margin: 0;
-    }
-    * + :not(code) {
-      margin-top: 1.2rem;
-    }
-    li {
-      margin-top: 0 !important;
-    }
-    blockquote {
-      padding: 16px;
-      color: rgba(255, 255, 255, 0.82);
-      border-left: 0.25em solid;
-      border-color: #3ccf91;
-      background: #080808;
-      text-wrap: wrap;
-      white-space: pre-wrap; /* Allow text to wrap */
-      word-break: break-word; /* Break words when needed */
-      overflow-x: auto; /* Add horizontal scroll if needed for small screens */
-    }
-    blockquote p {
-      font-style: italic;
-    }
-    img {
-      display: block;
-      margin: auto;
-    }
-    h1{
-      font-size: 2.5rem;
-      color:  white
-    }
-    h2{
-      font-size: 2rem;
-      font-weight: 600;
-    }
-    p code,
-    code {
-      background: #2e2e2e; /* Dark background color */
-      color: #3ccf91; /* Light green text color for readability */
-      padding: 0.4rem 0.6rem; /* Adequate padding for readability */
-      border-radius: 0.3rem; /* Rounded corners */
-      font-family: 'Courier New', Courier, monospace; /* Monospaced font */
-      font-size: 1rem; /* Base font size */
-      white-space: pre-wrap; /* Preserve whitespace and allow text to wrap */
-      word-break: break-word; /* Break words when needed */
-      overflow-x: auto; /* Add horizontal scroll if needed for small screens */
-      display: block; /* Ensure the code block spans the full width */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    }
-    
-    /* Optional: Add a custom scrollbar for better UX */
-    code::-webkit-scrollbar {
-      height: 8px;
-    }
-    
-    code::-webkit-scrollbar-thumb {
-      background-color: #3ccf91;
-      border-radius: 4px;
-    }
-    
-    code::-webkit-scrollbar-track {
-      background: #2b2b2b;
-    }
-    
-    p{
-      color: white
-    }
-  p  a {
-  color: #1e90ff; /* Dodger Blue color */
-  text-decoration: underline; /* Underline text */
+interface PostContainerProps {
+  children: ReactNode;
+  className?: string;
 }
 
-  p a:hover {
-  color: #104e8b; /* Darker blue for hover */
-  text-decoration: underline; /* Ensure underline remains on hover */
-  }
-
-  }
-`
-
+export function PostContainer({
+  children,
+  className = '',
+}: PostContainerProps) {
+  return (
+    <div
+      className={` text-base leading-8 text-ink-700
+        [&>*+*]:mt-5
+        [&_h1]:text-4xl [&_h1]:font-bold [&_h1]:leading-tight [&_h1]:text-ink-900
+        [&_h2]:mt-10 [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-ink-900
+        [&_h3]:mt-8 [&_h3]:text-2xl [&_h3]:font-semibold [&_h3]:text-ink-900
+        [&_p]:leading-8
+        [&_ul]:list-disc [&_ul]:pl-6
+        [&_ol]:list-decimal [&_ol]:pl-6
+        [&_li]:mt-2
+        [&_blockquote]:border-l-4 [&_blockquote]:border-brand-500
+        [&_blockquote]:bg-cream-200 [&_blockquote]:p-5 [&_blockquote]:italic
+        [&_a]:text-brand-600 [&_a]:underline
+        [&_a:hover]:text-brand-800
+        [&_img]:mx-auto [&_img]:max-w-full
+         [&_pre]:my-6 [&_pre]:overflow-x-auto [&_pre]:rounded-xl
+        [&_pre]:bg-[#080808] [&_pre]:p-5 [&_pre]:shadow-lg
+        [&_pre_code]:whitespace-pre [&_pre_code]:bg-transparent
+        [&_pre_code]:p-0 [&_pre_code]:font-mono
+        [&_pre_code]:text-sm [&_pre_code]:leading-7
+        [&_pre_code]:text-brand-300
+        ${className}`}
+    >
+      {children}
+    </div>
+  );
+}

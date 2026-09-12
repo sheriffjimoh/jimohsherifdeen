@@ -7,7 +7,6 @@ export  function Contact() {
     <section id="contact" className="relative py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className=" flex items-center gap-3 mb-6 justify-center">
-          <span className="font-mono text-sm text-brand-500">04</span>
           <div className="h-px w-12 bg-brand-500/40" />
           <span className="text-sm uppercase tracking-widest text-ink-400">Contact</span>
         </div>
@@ -49,16 +48,6 @@ export  function Contact() {
                 </a>
               );
             })}
-          </div>
-        </div>
-
-        <div className=" mt-12 flex justify-center">
-          <div className="flex items-center gap-3 rounded-full border border-ink-900/10 bg-cream-100 px-5 py-2.5 text-sm text-ink-600">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage-500 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-sage-500" />
-            </span>
-            Available for new opportunities
           </div>
         </div>
       </div>

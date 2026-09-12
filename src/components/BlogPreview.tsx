@@ -26,7 +26,6 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
     <section id="blog" className="relative py-28 lg:py-36 bg-cream-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className=" flex items-center gap-3 mb-6">
-          <span className="font-mono text-sm text-brand-500">03</span>
           <div className="h-px w-12 bg-brand-500/40" />
           <span className="text-sm uppercase tracking-widest text-ink-400">
             Writing

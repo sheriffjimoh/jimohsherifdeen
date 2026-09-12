@@ -72,7 +72,6 @@ export  function About() {
           {/* Right: bio + services + skills */}
           <div>
             <div className="reveal flex items-center gap-3 mb-6">
-              <span className="font-mono text-sm text-brand-500">01</span>
               <div className="h-px w-12 bg-brand-500/40" />
               <span className="text-sm uppercase tracking-widest text-ink-400">About</span>
             </div>

@@ -37,10 +37,10 @@ export  function Hero() {
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <a
-                href="#projects"
+                href="#works"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                  document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="rounded-full border border-ink-900/15 px-6 py-3.5 text-sm font-semibold text-ink-900 transition-all hover:bg-ink-900/5"
               >

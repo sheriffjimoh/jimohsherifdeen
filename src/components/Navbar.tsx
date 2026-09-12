@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 
 const navLinks = [
-  { to: '/', label: 'Work', section: 'home' },
+  { to: '/#works', label: 'Work', section: 'home' },
   { to: '/blog', label: 'Writing' },
   { to: '/#about', label: 'About' },
   { to: '/#contact', label: 'Contact' },
