@@ -1,4 +1,4 @@
-import { Hero, Navbar, Marquee, About }  from '@/components'
+import { Hero, Navbar, Marquee, About, Projects, BlogPreview, Contact, Footer }  from '@/components'
 import Head from 'next/head'
 
 export default function Home({ projects, articles }: any) {
@@ -7,11 +7,14 @@ export default function Home({ projects, articles }: any) {
      <Head>
         <title>Jimoh Sherifdeen - Full Stack Software Engineer</title> 
      </Head>
-
-        <Navbar />
         <Hero />
         <Marquee />
         <About />
+        <Projects projects={projects} />
+        <BlogPreview articles={articles} />
+        <Contact />
+        <Footer />
+
             
     </>
   )

@@ -14,8 +14,7 @@ export interface singleArticeleProps{
         body: any,
         image: string
       }
-  }[]
-   
+  }[] 
 }
 export  function LatestArticle({ articles }: singleArticeleProps) {
 

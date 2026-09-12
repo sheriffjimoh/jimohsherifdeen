@@ -14,3 +14,7 @@ export * from './Hero';
 export * from './Navbar';
 export * from './Marquee';
 export * from './About';
+export { BlogPreview } from './BlogPreview';
+export * from './Footer';
+export * from './Contact';
+export { Projects } from './Projects';
