@@ -1,4 +1,4 @@
-import { Hero, Navbar, Marquee, About, Projects, BlogPreview, Contact, Footer }  from '@/components'
+import { Hero, Marquee, About, Projects, BlogPreview, Contact, Footer }  from '@/components'
 import Head from 'next/head'
 
 export default function Home({ projects, articles }: any) {
@@ -37,14 +37,6 @@ export async function getStaticProps() {
     order: '-sys.createdAt',
   });
   
-
-  // let introduction = await client.getEntries({
-  //   content_type: 'introduction',
-  //   limit: 2,
-  //   order: 'sys.createdAt',
-  // })
-
-
 
   return {
     props: {
