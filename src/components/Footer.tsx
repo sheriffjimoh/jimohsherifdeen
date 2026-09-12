@@ -11,12 +11,12 @@ export  function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <a href="/" className="flex items-center gap-2.5 text-xl font-bold">
+            <Link href="/" className="flex items-center gap-2.5 text-xl font-bold">
               <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-ink-900 font-mono text-sm text-cream-50">
                 {profile.shortName}
               </span>
               {profile.name}
-            </a>
+            </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-500">
               {profile.role} turning concepts into functional products across
               web, mobile, and backend.
@@ -25,16 +25,15 @@ export  function Footer() {
               {profile.social.map((link) => {
                 const Icon = getIcon(link.icon);
                 return (
-                  <a
+                  <Link
                     key={link.label}
                     href={link.url}
                     target="_blank"
-                    rel="noopener noreferrer"
                     aria-label={link.label}
                     className="flex h-10 w-10 items-center justify-center rounded-lg border border-ink-900/10 text-ink-500 transition-all hover:border-ink-900 hover:bg-ink-900 hover:text-cream-50"
                   >
                     <Icon className="h-4 w-4" />
-                  </a>
+                  </Link>
                 );
               })}
             </div>
@@ -44,22 +43,22 @@ export  function Footer() {
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-ink-400 mb-4">Navigate</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="/" className="text-ink-600 underline-link hover:text-ink-900">Home</a></li>
-              <li><a href="/blog" className="text-ink-600 underline-link hover:text-ink-900">Blog</a></li>
-              <li><a href="/#about" className="text-ink-600 underline-link hover:text-ink-900">About</a></li>
-              <li><a href="/#contact" className="text-ink-600 underline-link hover:text-ink-900">Contact</a></li>
+              <li><Link href="/" className="text-ink-600 underline-link hover:text-ink-900">Home</Link></li>
+              <li><Link href="/blog" className="text-ink-600 underline-link hover:text-ink-900">Blog</Link></li>
+              <li><Link href="/#about" className="text-ink-600 underline-link hover:text-ink-900">About</Link></li>
+              <li><Link href="/#contact" className="text-ink-600 underline-link hover:text-ink-900">Contact</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-ink-400 mb-4">Get in touch</h4>
-            <a
+            <Link
               href={`mailto:${profile.email}`}
               className="text-sm text-ink-600 underline-link hover:text-ink-900"
             >
               {profile.email}
-            </a>
+            </Link>
             <p className="mt-3 text-sm text-ink-500">{profile.location}</p>
             <p className="mt-3 text-sm text-brand-600 font-medium">{profile.status}</p>
           </div>

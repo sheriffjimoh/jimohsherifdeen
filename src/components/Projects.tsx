@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { ArrowUpRight, Globe, Smartphone, Layers } from 'lucide-react';
-
+import Image from 'next/image';
+import Link from 'next/link';
 const categories = [
   { id: 'all', label: 'All', icon: Layers },
   { id: 'saas', label: 'SaaS', icon: Globe },
@@ -37,7 +38,7 @@ function BentoCard({ project, size }: { project: ProjectFields; size: 'large' | 
       }`}
     >
       <div className={`relative overflow-hidden ${isLarge ? 'aspect-[16/12] lg:aspect-[16/14]' : 'aspect-[16/10]'}`}>
-        <img
+        <Image
           src={project.imgUrl}
           alt={project.title}
           className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
@@ -94,7 +95,7 @@ export  function Projects({ projects }: { projects: projectProps }) {
         (tag) => tag.toLowerCase().trim() === filter.toLowerCase()
       )
     );
-  }, [items, filter]);
+  }, [filter]);
 
 
   return (
@@ -108,7 +109,7 @@ export  function Projects({ projects }: { projects: projectProps }) {
 
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <h2 className="text-3xl font-bold leading-tight text-ink-900 sm:text-5xl">
-            Things I've{' '}
+            Things I&lsquo;ve{' '}
             <span className="font-display italic font-normal text-brand-500">built</span>
           </h2>
           <p className="max-w-md text-sm leading-relaxed text-ink-500">
@@ -134,37 +135,6 @@ export  function Projects({ projects }: { projects: projectProps }) {
             </button>
           ))}
         </div>
-
-        {/* Bento grid */}
-        {/* <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {filtered?.map((project, i) => (
-            <div
-              key={project.id}
-              className=""
-              style={{ transitionDelay: `${(i % 4) * 60}ms` }}
-            >
-              <BentoCard
-                project={project}
-                size={i === 0 ? 'large' : i < 3 ? 'medium' : 'small'}
-              />
-            </div>
-          ))}
-        </div> */}
-           {/* <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {filteredItems?.map((project, index) => (
-            <div
-              key={`${project.fields.title}-${index}`}
-              className=""
-              style={{ transitionDelay: `${(index % 4) * 60}ms` }}
-            >
-              <BentoCard
-                project={project.fields}
-                size={index === 0 ? 'large' : index < 3 ? 'medium' : 'small'}
-              />
-            </div>
-          ))}
-        </div> */}
-
 
         <div
   key={filter}

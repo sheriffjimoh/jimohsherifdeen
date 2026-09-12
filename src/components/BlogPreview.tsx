@@ -1,6 +1,8 @@
 import { getReadTime } from "@/hooks/getReadTime";
 import { ArrowUpRight, Clock, Calendar } from "lucide-react";
 import dateFormat from "dateformat";
+import Link from "next/link";
+import Image from "next/image";
 
 export type Article = {
   fields: {
@@ -39,22 +41,22 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
               articles
             </span>
           </h2>
-          <a
+          <Link
             href="/blog"
             className="group flex items-center gap-2 text-sm font-semibold text-ink-900 underline-link"
           >
             View all articles
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </Link>
         </div>
 
         {/* Featured */}
-        <a
+        <Link
           href={`/blog/${featured.fields.slug}`}
           className="reveal card-lift group mt-10 grid overflow-hidden rounded-2xl border border-ink-900/10 bg-cream-50 lg:grid-cols-2"
         >
           <div className="relative min-h-[240px] overflow-hidden bg-gradient-to-br from-brand-400/20 to-cream-200">
-            <img
+            <Image
               src={featured.fields.image}
               alt={featured.fields.title}
               className="absolute inset-0 z-0 h-full w-full object-cover transition-transform group-hover:scale-105"
@@ -88,12 +90,12 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Rest */}
         <div className="mt-6 grid gap-5 md:grid-cols-3">
           {rest.map((article, i) => (
-            <a
+            <Link
               key={article.fields.slug}
               href={`/blog/${article.fields.slug}`}
               className=" card-lift group rounded-2xl border border-ink-900/10 bg-cream-50 p-6"
@@ -110,7 +112,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
               <div className="mt-4 flex items-center gap-2 text-xs text-ink-400">
                 <Clock className="h-3 w-3" /> {getReadTime(article.fields.body)}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

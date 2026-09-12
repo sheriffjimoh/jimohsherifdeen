@@ -1,6 +1,7 @@
 import { profile, skills } from '@/content/portfolio';
 import { getIcon } from '@/lib/icons';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 export  function About() {
 
@@ -34,7 +35,7 @@ export  function About() {
           {/* Left: portrait */}
           <div className="reveal space-y-6">
             <div className="group relative overflow-hidden rounded-3xl">
-              <img
+              <Image
                 src={profile.avatarUrl}
                 alt={profile.name}
                 className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"

@@ -9,6 +9,8 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import Image from "next/image";
+
 
 const richTextOptions: Options = {
   renderMark: {
@@ -67,12 +69,12 @@ export default function Post({ metadata }: { metadata: blogProps }) {
         <main className="flex min-h-screen flex-col items-center justify-center px-6">
           <h1 className="text-6xl font-bold text-ink-900">404</h1>
           <p className="mt-4 text-lg text-ink-500">Article not found.</p>
-          <a
+          <Link
             href="/blog"
             className="mt-8 rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold text-cream-50 transition-all hover:bg-brand-500 hover:text-ink-900"
           >
             Back to blog
-          </a>
+          </Link>
         </main>
       </div>
     );
@@ -162,7 +164,7 @@ export default function Post({ metadata }: { metadata: blogProps }) {
           {/* Author + share */}
           <div className=" mt-10 flex items-center justify-between border-y border-ink-900/10 py-5">
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src={profile.avatarUrl}
                 alt={profile.name}
                 className="h-11 w-11 rounded-full object-cover"
@@ -204,12 +206,12 @@ export default function Post({ metadata }: { metadata: blogProps }) {
 
           <div className="mx-auto max-w-3xl px-6 lg:px-10 mt-16">
           <div className="flex items-center justify-between border-t border-ink-900/10 pt-8">
-            <a
+            <Link
               href={`mailto:${profile.email}`}
               className="text-sm font-medium text-brand-600 underline-link"
             >
               Reply via email
-            </a>
+            </Link>
           </div>
         </div>
 

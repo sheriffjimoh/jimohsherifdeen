@@ -2,6 +2,7 @@
 import { ArrowUpRight, ArrowDown, Sparkles } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 import { getIcon } from '@/lib/icons';
+import Link from 'next/link';
 
 export  function Hero() {
   return (
@@ -24,19 +25,19 @@ export  function Hero() {
             </h1>
 
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-ink-500 animate-fade-up" style={{ animationDelay: '0.25s' }}>
-              I'm {profile.name}, a {profile.tagline.toLowerCase()} who turns
+              I&apos;m {profile.name}, a {profile.tagline.toLowerCase()} who turns
               concepts into functional products across web, mobile, and backend.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-              <a href="/blog"
+              <Link href="/blog"
                 className="group flex items-center gap-2 rounded-full bg-ink-900 px-6 py-3.5 text-sm font-semibold text-cream-50 transition-all hover:bg-brand-500 hover:text-ink-900"
               >
                 <Sparkles className="h-4 w-4" />
                 Read my writing
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#works"
                 onClick={(e) => {
                   e.preventDefault();
@@ -45,7 +46,7 @@ export  function Hero() {
                 className="rounded-full border border-ink-900/15 px-6 py-3.5 text-sm font-semibold text-ink-900 transition-all hover:bg-ink-900/5"
               >
                 View selected work
-              </a>
+              </Link>
             </div>
           </div>
 
