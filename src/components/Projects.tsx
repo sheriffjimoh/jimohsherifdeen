@@ -37,24 +37,20 @@ function BentoCard({ project, size }: { project: ProjectFields; size: 'large' | 
         isLarge ? 'lg:col-span-2 lg:row-span-2' : isMedium ? 'lg:col-span-2' : ''
       }`}
     >
-      <div className={`relative overflow-hidden ${isLarge ? 'aspect-[16/12] lg:aspect-[16/14]' : 'aspect-[16/10]'}`}>
-        <Image
-          src={project.imgUrl}
-          alt={project.title}
-          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-          loading="lazy"
-        />
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-ink-900/50 via-transparent to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
-        {project.featured && (
-          <span className="absolute right-3 top-3 rounded-full bg-brand-500 px-3 py-1 text-xs font-bold text-ink-900">
-            Featured
-          </span>
-        )}
-        <span className="absolute left-3 top-3 rounded-full bg-cream-50/90 px-2.5 py-1 font-mono text-xs text-ink-600 backdrop-blur-sm">
-          {project.year}
-        </span>
-      </div> */}
-      </div>
+    <div
+  className={`relative w-full h-[170px] overflow-hidden bg-ink-900/5 ${
+    isLarge ? 'aspect-[16/12] lg:aspect-[16/14]' : 'aspect-[16/10]'
+  }`}
+>
+  <Image
+    src={project.imgUrl}
+    alt={project.title}
+    fill
+    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+    className="object-center transition-transform duration-700 group-hover:scale-105"
+    loading="lazy"
+  />
+</div>
 
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">

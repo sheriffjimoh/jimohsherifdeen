@@ -13,9 +13,7 @@ export default function Home({ projects, articles }: any) {
         <Projects projects={projects} />
         <BlogPreview articles={articles} />
         <Contact />
-        <Footer />
-
-            
+        <Footer />   
     </>
   )
 }

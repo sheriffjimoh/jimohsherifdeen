@@ -59,6 +59,8 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
             <Image
               src={featured.fields.image}
               alt={featured.fields.title}
+              width={1200}
+              height={800}
               className="absolute inset-0 z-0 h-full w-full object-cover transition-transform group-hover:scale-105"
             />
 

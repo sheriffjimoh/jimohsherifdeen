@@ -1,6 +1,7 @@
-import { ArrowUpRight, Link, Mail } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 import { getIcon } from '@/lib/icons';
+import Link from 'next/link';
 
 export  function Contact() {
   return (

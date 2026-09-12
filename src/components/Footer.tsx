@@ -1,6 +1,7 @@
-import { ArrowUp, Link } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 import { getIcon } from '@/lib/icons';
+import Link from 'next/link';
 
 export  function Footer() {
   const year = new Date().getFullYear();
